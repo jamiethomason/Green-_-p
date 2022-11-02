@@ -1,0 +1,23 @@
+{
+  "name": "green-_-p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiethomason/Green-_-p.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiethomason/Green-_-p/issues"
+  },
+  "homepage": "https://github.com/jamiethomason/Green-_-p#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
