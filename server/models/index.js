@@ -1,2 +1,3 @@
-import { Express } from "express";
-import {bodyParser} from 'bodyParser';
+const blogList = require('./blog-list');
+
+module.exports = blogList;
