@@ -3,6 +3,7 @@ import React from 'react';
 function Nav() {
     const categories = [
         {
+
           name: "Login",
           description:
             "WHere users log in and create a profile",
@@ -12,6 +13,15 @@ function Nav() {
         {
           name: "Plant pics",
           description: "Show us your plants",
+          name: "Log in",
+          description:
+            "",
+        },
+        { name: "Home", description: "" },
+        { name: "Profile", description: "" },
+        {
+          name: "Blog",
+          description: "Fields, farmhouses, waterfalls, and the beauty of nature",
         },
       ];
       function categorySelected() {
@@ -21,6 +31,7 @@ function Nav() {
     <header>
          <h2>
     <a href="/">
+
       <span role="img" aria-label="plant"> 🪴</span> Green UP!
     </a>
   </h2>

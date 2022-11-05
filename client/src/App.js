@@ -1,14 +1,17 @@
 
 import './App.css';
-//import Login from './pages/Login';
+import Login from './pages/Login';
 import Nav from './pages/Nav';
 
 function App() {
   return (
-    <div>
+ <div>
       <Nav></Nav>
     
 
+    <div className="App">
+    <Nav></Nav>
+   
     </div>
   );
 }
