@@ -1,53 +1,42 @@
 import React from 'react';
 
-function Nav() {
-    const categories = [
-        {
-          name: "Login",
-          description:
-            "WHere users log in and create a profile",
-        },
-        { name: "Profile", description: "The users profile" },
-        { name: "Blog", description: "Blog away to your hearts content" },
-        {
-          name: "Plant pics",
-          description: "Show us your plants",
-        },
-      ];
-      function categorySelected() {
-        console.log("hello")
-      }
+// Here we are using object destructuring assignment to pluck off our variables from the props object
+// We assign them to their own variable names
+function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <header>
-         <h2>
-    <a href="/">
-      <span role="img" aria-label="plant"> 🪴</span> Green UP!
-    </a>
-  </h2>
-  <nav>
-    <ul className="flex-row">
-      <li className="mx-2">
-        <a href="#about">
-          About Green Up
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a
+          href="#about"
+          onClick={() => handlePageChange('About')}
+          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+        >
+          About
         </a>
       </li>
-      <li>
-        <span>Contact Us</span>
-      </li>
-      {categories.map((category) => (
-        <li
-          className="mx-1"
-          key={category.name}
+      <li className="nav-item">
+        <a
+          href="#portfolio"
+          onClick={() => handlePageChange('Portfolio')}
+          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
         >
-           <span onClick={() => categorySelected(category.name)} >
-            {category.name}
-          </span>
-        </li>
-      ))}
+          Portfolio
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#contact"
+          onClick={() => handlePageChange('Contact')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+        >
+          Contact
+        </a>
+      </li>
     </ul>
-  </nav>
-    </header>
   );
 }
 
-export default Nav;
+export default NavTabs;
