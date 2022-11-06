@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../ProjectCard';
 
-export default function Portfolio() {
+export default function Blog() {
     const projects = [
         {
             id: 1,
@@ -38,7 +38,7 @@ export default function Portfolio() {
     ]
   return (
     <div>
-      <h1>Portfolio Page</h1>
+      <h1>Blog Page</h1>
         <div>
             {projects.map(project => (
                 <ProjectCard key={project.id} title={project.title}/>
