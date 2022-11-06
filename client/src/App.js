@@ -1,19 +1,18 @@
+import React from "react";
+import PortfolioContainer from "./components/PortfolioContainer";
+// import Footer from "./components/Footer";
+// import Header from "./components/Header"
 
-import './App.css';
-import Login from './pages/Login';
-import Nav from './pages/Nav';
+const App = () => <PortfolioContainer />;
 
-function App() {
-  return (
- <div>
-      <Nav></Nav>
-    
+// function App() {
 
-    <div className="App">
-    <Nav></Nav>
-   
-    </div>
-  );
-}
+//   return (
+//       <div className="App">
+//           <Header/>
+//           <Footer/>
+//       </div>
+//   );
+// }
 
 export default App;
