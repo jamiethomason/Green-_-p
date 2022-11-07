@@ -12,7 +12,7 @@ function ProjectCard(props){
             </Card.Text>
           </Card.Body>
         </Card>
-      );
+     );
 }
 
 export default ProjectCard;

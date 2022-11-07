@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavTabs from './NavTabs';
-import About from './AboutMe';
+//import About from './AboutMe';
 import Blog from './Blog';
 import Contact from './Contact';
 
@@ -10,7 +10,8 @@ export default function PortfolioContainer() {
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     if (currentPage === 'About') {
-      return <About />;
+     // return <About />;
+     return '';
     }
     if (currentPage === 'Blog') {
       return <Blog />;
