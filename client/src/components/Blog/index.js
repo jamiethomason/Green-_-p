@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProjectCard from '../ProjectCard';
 
-export default function Blog() {
+function Blog() {
     const projects = [
         {
             id: 1,
@@ -94,3 +94,4 @@ export default function Blog() {
     </div>
   );
 }
+export default Blog;
