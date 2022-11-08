@@ -17,10 +17,10 @@ class Header extends Component {
     
 
     <div className="content">
-          <Route exact path="/" render={() => (<Redirect to="/blog"/>)}/>
-          <Route path="/blog" component={Blog}/>
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
+          <Route exact path="/" render={() => (<Redirect to="/Blog"/>)}/>
+          <Route path="/Blog" component={Blog}/>
+          <Route path="/About" component={About}/>
+          <Route path="/Contact" component={Contact}/>
         </div>
     </HashRouter>
     )
