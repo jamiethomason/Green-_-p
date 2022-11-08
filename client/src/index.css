@@ -21,8 +21,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  background: linear-gradient(45deg, rgb(28, 75, 38), rgb(176, 255, 30));
   font-family: "Sansita Swashed", cursive;
+}
+h1{
+  background-color: white;
+}
+h3{
+  background-color: white;
 }
 .center {
   position: relative;
@@ -34,7 +40,7 @@ body {
   font-size: 2em;
   border-left: 5px solid dodgerblue;
   padding: 10px;
-  color: #000;
+  color: linear-gradient(45deg, rgb(14, 63, 25), rgb(176, 255, 30));
   letter-spacing: 5px;
   margin-bottom: 60px;
   font-weight: bold;
@@ -82,4 +88,7 @@ body {
 }
 .center .inputbox:hover [type="button"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+.nav {
+  background-color: white;
 }
