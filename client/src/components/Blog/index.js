@@ -65,7 +65,7 @@ function Blog() {
   return (
     <div>
       <h1>Blog Page</h1>
-      <form id="blog-form" onSubmit={handleSubmit}>
+      <form className="center" id="blog-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title:</label>
           <input type="text" name="title" defaultValue={title} onBlur={handleChange} />
@@ -83,13 +83,13 @@ function Blog() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" type="submit">Post!</button>
       </form>
         <div>
-            {projects.map(project => (
+             {/* {projects.map(project => (
                 <ProjectCard image={project.image} key={project.id} title={project.title}/>
 
-            ))}
+            ))}  */}
         </div>
     </div>
   );
