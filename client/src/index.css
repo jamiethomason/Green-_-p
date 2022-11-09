@@ -37,11 +37,11 @@ h3{
   border-radius: 10px;
 }
 .center h1 {
-  font-size: 2em;
+  font-size: 5em;
   border-left: 5px solid rgb(5, 90, 19);
   padding: 10px;
   color: linear-gradient(45deg, rgb(14, 63, 25), rgb(176, 255, 30));
-  letter-spacing: 5px;
+  /* letter-spacing: 5px; */
   margin-bottom: 60px;
   font-weight: bold;
   padding-left: 10px;
@@ -93,5 +93,5 @@ h3{
   background-color: white;
   border-radius: 7px;
   font-weight: bold;
-  
 }
+
