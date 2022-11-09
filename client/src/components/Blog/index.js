@@ -64,7 +64,7 @@ function Blog() {
   };
 
   return (
-    <div>
+    <div id="blogStyling">
       <h1>Blog Page</h1>
       <form className="center" id="blog-form" onSubmit={handleSubmit}>
         <div>

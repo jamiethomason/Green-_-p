@@ -1,9 +1,13 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-function ProjectCard(props){
-    return (
-      <div style={{ width: '18rem' }} >
-      <img src="https://www.fillmurray.com/640/360" style={{ height: '60px'}} alt=""/>
+import React from "react";
+import Card from "react-bootstrap/Card";
+function ProjectCard(props) {
+  return (
+    <div style={{ width: "100%", padding: "20px" }}>
+      <img
+        src="https://www.fillmurray.com/640/360"
+        style={{ height: "60px" }}
+        alt=""
+      />
       <div>
         <div>{props.title}</div>
         <div>
@@ -12,7 +16,7 @@ function ProjectCard(props){
         </div>
       </div>
     </div>
-     );
+  );
 }
 
 export default ProjectCard;
