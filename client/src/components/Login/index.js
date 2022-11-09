@@ -43,19 +43,19 @@ function LoginForm() {
       <h3>Or Create an Account <a href="link">Here</a></h3>
       <form  className="center" id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">User Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+          <label htmlFor="name"></label>
+          <input type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="User Name:"/>
         </div>
         <div>
-          <label htmlFor="email">Email address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+          <label htmlFor="email"></label>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Email address:"/>
         </div>
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button className="button" data-testid="button" type="submit">Submit</button>
       </form>
     </section>
   );
