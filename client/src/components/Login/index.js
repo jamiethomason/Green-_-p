@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { validateEmail } from '../../utils/helpers';
 //import Button from 'react-bootstrap/Button'
 
-function ContactForm() {
+function LoginForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -39,19 +39,16 @@ function ContactForm() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Contact Us</h1>
-      <form className="center" id="contact-form" onSubmit={handleSubmit}>
+      <h1 data-testid="h1tag">Login</h1>
+      <h3>Or Create an Account <a href="link">Here</a></h3>
+      <form  className="center" id="contact-form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">User Name:</label>
           <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="email">Email address:</label>
           <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="1" defaultValue={message} onBlur={handleChange} />
         </div>
         {errorMessage && (
           <div>
@@ -64,4 +61,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default LoginForm;

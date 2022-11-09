@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import ProjectCard from '../ProjectCard';
 
-export default function Blog() {
+
+function Blog() {
     const projects = [
         {
             id: 1,
             title: 'Project One',
             description: '',
-            image: "/plant.jpg",
+            image: "",
             deployed: '',
             github: ''
         },
@@ -63,16 +64,16 @@ export default function Blog() {
   };
 
   return (
-    <div>
+    <div id="blogStyling">
       <h1>Blog Page</h1>
-      <form id="blog-form" onSubmit={handleSubmit}>
+      <form className="center" id="blog-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title:</label>
           <input type="text" name="title" defaultValue={title} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor="description">Description:</label>
-          <textarea name="description" rows="5" defaultValue={description} onBlur={handleChange} />
+          <textarea name="description" rows="1" defaultValue={description} onBlur={handleChange} />
         </div>
         <div>
             <label htmlFor="platImage">Choose a plant picture:</label>
@@ -83,14 +84,17 @@ export default function Blog() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button data-testid="button" type="submit">Post!</button>
       </form>
-        <div>
-            {projects.map(project => (
+        
+             {projects.map(project => (
+              <>
                 <ProjectCard image={project.image} key={project.id} title={project.title}/>
-
-            ))}
-        </div>
+         
+            </>
+            ))} 
+        
     </div>
   );
 }
+export default Blog;
