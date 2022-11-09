@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import ProjectCard from '../ProjectCard';
 
+
 function Blog() {
     const projects = [
         {
             id: 1,
             title: 'Project One',
             description: '',
-            image: "/plant.jpg",
+            image: "",
             deployed: '',
             github: ''
         },
@@ -72,7 +73,7 @@ function Blog() {
         </div>
         <div>
           <label htmlFor="description">Description:</label>
-          <textarea name="description" rows="5" defaultValue={description} onBlur={handleChange} />
+          <textarea name="description" rows="1" defaultValue={description} onBlur={handleChange} />
         </div>
         <div>
             <label htmlFor="platImage">Choose a plant picture:</label>
@@ -85,12 +86,14 @@ function Blog() {
         )}
         <button data-testid="button" type="submit">Post!</button>
       </form>
-        <div>
-             {/* {projects.map(project => (
+        
+             {projects.map(project => (
+              <>
                 <ProjectCard image={project.image} key={project.id} title={project.title}/>
-
-            ))}  */}
-        </div>
+         
+            </>
+            ))} 
+        
     </div>
   );
 }
