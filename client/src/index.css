@@ -24,8 +24,9 @@ body {
   background: linear-gradient(45deg, rgb(28, 75, 38), rgb(176, 255, 30));
   font-family: "Sansita Swashed", cursive;
 }
-h1{
-
+input, textarea{
+  border-radius: 8px;
+  margin-top: 8px;
 }
 
 .center {
@@ -146,6 +147,7 @@ label{
   vertical-align: middle;
   white-space: nowrap;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .button:focus:not(:focus-visible):not(.focus-visible) {

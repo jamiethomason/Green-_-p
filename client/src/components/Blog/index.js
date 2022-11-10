@@ -78,8 +78,10 @@ function Blog() {
         </div>
         <div>
             <label htmlFor="platImage">Choose a plant picture:</label>
+            <div>
             <input type="file" id="platImage" name="plantImage" accept="image/png, image/jpeg"/>
-        </div>
+            </div>
+            </div>
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
