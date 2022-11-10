@@ -39,10 +39,28 @@ function LoginForm() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Login</h1>
-      <h3>Or Create an Account <a href="link">Here</a></h3>
+    
+      
       <form  className="center" id="contact-form" onSubmit={handleSubmit}>
+      <h2 data-testid="h1tag">Login</h2>
+     
         <div>
+          <label htmlFor="name"></label>
+          <input type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="User Name:"/>
+        </div>
+        <div>
+          <label htmlFor="email"></label>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Password:"/>
+        </div>
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+        <button className="button" data-testid="button" type="submit">Login</button>
+
+        <div>
+          <h5>Create an Account Here!</h5>
           <label htmlFor="name"></label>
           <input type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="User Name:"/>
         </div>
@@ -50,12 +68,11 @@ function LoginForm() {
           <label htmlFor="email"></label>
           <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Email address:"/>
         </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button className="button" data-testid="button" type="submit">Submit</button>
+        <div>
+          <label htmlFor="email"></label>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Password:"/>
+        </div>
+        <button className="button" data-testid="button" type="submit">Create Account</button>
       </form>
     </section>
   );

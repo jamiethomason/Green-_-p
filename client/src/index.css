@@ -145,6 +145,7 @@ label{
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
+  margin-bottom: 10px;
 }
 
 .button:focus:not(:focus-visible):not(.focus-visible) {
