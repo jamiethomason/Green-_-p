@@ -2,7 +2,7 @@ import React from 'react';
 //import Card from 'react-bootstrap/Card';
 function ProjectCard(props){
     return (
-      <div className="card"style={{ width: '36rem' }} >
+      <div className="card"style={{ width: 'device-width' }} >
       <img src="plant.jpg" style={{ height: '75px'}} alt=""/>
       <div>
         <div className="title">{props.title}Title </div>

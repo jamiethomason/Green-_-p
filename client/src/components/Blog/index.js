@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from '../ProjectCard';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function Blog() {
@@ -12,30 +13,7 @@ function Blog() {
             deployed: '',
             github: ''
         },
-//         // {
-//         //     id: 2,
-//         //     title: 'Project Two',
-//         //     description: '',
-//         //     image: '',
-//         //     deployed: '',
-//         //     github: ''
-//         // },
-//         // {
-//         //     id: 3,
-//         //     title: 'Project Three',
-//         //     description: '',
-//         //     image: '',
-//         //     deployed: '',
-//         //     github: ''
-//         // },
-//         // {
-//         //     id: 4,
-//         //     title: 'Project Four',
-//         //     description: '',
-//         //     image: '',
-//         //     deployed: '',
-//         //     github: ''
-//         // }
+
     ]
     const [formState, setFormState] = useState({ title: '', description: '', plantImage: '' });
 
@@ -66,7 +44,7 @@ function Blog() {
   return (
     <div>
       
-      <form className="center" id="blog-form" onSubmit={handleSubmit}>
+      <form className="center" style={{ width: 'device-width' }} id="blog-form" onSubmit={handleSubmit}>
       <h2>Blog Page</h2>
         <div>
           <label htmlFor="title"></label>
