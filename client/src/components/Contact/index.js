@@ -39,8 +39,9 @@ function ContactForm() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Contact Us</h1>
+      
       <form className="center" id="contact-form" onSubmit={handleSubmit}>
+      <h2 data-testid="h1tag">Contact Us</h2>
         <div>
           <label htmlFor="name"></label>
           <input className='inputbox' type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="Name:" />

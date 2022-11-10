@@ -6,38 +6,38 @@ function Blog() {
     const projects = [
         {
             id: 1,
-            title: 'Project One',
+            title: '',
             description: '',
             image: "",
             deployed: '',
             github: ''
         },
-        {
-            id: 2,
-            title: 'Project Two',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        },
-        {
-            id: 3,
-            title: 'Project Three',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        },
-        {
-            id: 4,
-            title: 'Project Four',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        }
+//         // {
+//         //     id: 2,
+//         //     title: 'Project Two',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // },
+//         // {
+//         //     id: 3,
+//         //     title: 'Project Three',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // },
+//         // {
+//         //     id: 4,
+//         //     title: 'Project Four',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // }
     ]
-    const [formState, setFormState] = useState({ title: '', description: '', platImage: '' });
+    const [formState, setFormState] = useState({ title: '', description: '', plantImage: '' });
 
     const [errorMessage, setErrorMessage] = useState('');
     const { title, description, plantImage } = formState;
@@ -65,8 +65,9 @@ function Blog() {
 
   return (
     <div>
-      <h1>Blog Page</h1>
+      
       <form className="center" id="blog-form" onSubmit={handleSubmit}>
+      <h2>Blog Page</h2>
         <div>
           <label htmlFor="title"></label>
           <input type="text" name="title" defaultValue={title} onBlur={handleChange} placeholder="Title:" />
