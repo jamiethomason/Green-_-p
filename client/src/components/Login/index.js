@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { validateEmail } from '../../utils/helpers';
 //import Button from 'react-bootstrap/Button'
 
-function ContactForm() {
+function LoginForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -39,30 +39,43 @@ function ContactForm() {
 
   return (
     <section>
+    
       
-      <form className="center" id="contact-form" onSubmit={handleSubmit}>
-      <h2 data-testid="h1tag">Contact Us</h2>
+      <form  className="center" id="contact-form" onSubmit={handleSubmit}>
+      <h2 data-testid="h1tag">Login</h2>
+     
         <div>
           <label htmlFor="name"></label>
-          <input className='inputbox' type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="Name:" />
+          <input type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="User Name:"/>
         </div>
         <div>
           <label htmlFor="email"></label>
-          <input className='inputbox' type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Email address:" />
-        </div>
-        <div>
-          <label htmlFor="message"></label>
-          <textarea className='inputbox' name="message" rows="1" defaultValue={message} onBlur={handleChange} placeholder="Message:"/>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Password:"/>
         </div>
         {errorMessage && (
           <div>
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button className="button" data-testid="button" type="submit">Submit</button>
+        <button className="button" data-testid="button" type="submit">Login</button>
+
+        <div>
+          <h5>Create an Account Here!</h5>
+          <label htmlFor="name"></label>
+          <input type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="User Name:"/>
+        </div>
+        <div>
+          <label htmlFor="email"></label>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Email address:"/>
+        </div>
+        <div>
+          <label htmlFor="email"></label>
+          <input type="email" name="email" defaultValue={email} onBlur={handleChange} placeholder="Password:"/>
+        </div>
+        <button className="button" data-testid="button" type="submit">Create Account</button>
       </form>
     </section>
   );
 }
 
-export default ContactForm;
+export default LoginForm;

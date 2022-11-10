@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
 import ProjectCard from '../ProjectCard';
 
-export default function Blog() {
+
+function Blog() {
     const projects = [
         {
             id: 1,
-            title: 'Project One',
+            title: '',
             description: '',
-            image: "/plant.jpg",
+            image: "",
             deployed: '',
             github: ''
         },
-        {
-            id: 2,
-            title: 'Project Two',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        },
-        {
-            id: 3,
-            title: 'Project Three',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        },
-        {
-            id: 4,
-            title: 'Project Four',
-            description: '',
-            image: '',
-            deployed: '',
-            github: ''
-        }
+//         // {
+//         //     id: 2,
+//         //     title: 'Project Two',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // },
+//         // {
+//         //     id: 3,
+//         //     title: 'Project Three',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // },
+//         // {
+//         //     id: 4,
+//         //     title: 'Project Four',
+//         //     description: '',
+//         //     image: '',
+//         //     deployed: '',
+//         //     github: ''
+//         // }
     ]
-    const [formState, setFormState] = useState({ title: '', description: '', platImage: '' });
+    const [formState, setFormState] = useState({ title: '', description: '', plantImage: '' });
 
     const [errorMessage, setErrorMessage] = useState('');
     const { title, description, plantImage } = formState;
@@ -64,15 +65,16 @@ export default function Blog() {
 
   return (
     <div>
-      <h1>Blog Page</h1>
-      <form id="blog-form" onSubmit={handleSubmit}>
+      
+      <form className="center" id="blog-form" onSubmit={handleSubmit}>
+      <h2>Blog Page</h2>
         <div>
-          <label htmlFor="title">Title:</label>
-          <input type="text" name="title" defaultValue={title} onBlur={handleChange} />
+          <label htmlFor="title"></label>
+          <input type="text" name="title" defaultValue={title} onBlur={handleChange} placeholder="Title:" />
         </div>
         <div>
-          <label htmlFor="description">Description:</label>
-          <textarea name="description" rows="5" defaultValue={description} onBlur={handleChange} />
+          <label htmlFor="description"></label>
+          <textarea name="description" rows="1" defaultValue={description} onBlur={handleChange} placeholder="Description:" />
         </div>
         <div>
             <label htmlFor="platImage">Choose a plant picture:</label>
@@ -83,14 +85,17 @@ export default function Blog() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">Submit</button>
+        <button className="button" data-testid="button" type="submit">Post!</button>
       </form>
-        <div>
-            {projects.map(project => (
+        
+             {projects.map(project => (
+              <>
                 <ProjectCard image={project.image} key={project.id} title={project.title}/>
-
-            ))}
-        </div>
+         
+            </>
+            ))} 
+        
     </div>
   );
 }
+export default Blog;
