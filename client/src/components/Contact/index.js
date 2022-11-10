@@ -40,7 +40,7 @@ function ContactForm() {
   return (
     <section>
       
-      <form className="center" id="contact-form" onSubmit={handleSubmit}>
+      <form className="center" id="contact-form" style={{ width: 'device-width' }}  onSubmit={handleSubmit}>
       <h2 data-testid="h1tag">Contact Us</h2>
         <div>
           <label htmlFor="name"></label>
