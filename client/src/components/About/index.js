@@ -5,16 +5,7 @@ import React from 'react';
   return (
   
     <div className= "center">
-        <div class="wrap">
-	<div class="base">
-		<div class="flowerpot"></div>
-		<div class="blade blade-center"></div>
-		<div class="blade blade-left-s"></div>
-		<div class="blade blade-right-s"></div>
-		<div class="blade blade-left-l"></div>
-		<div class="blade blade-right-l"></div>
-	</div>
-</div>
+      
       <h1>Green ↑_↑p</h1>
       <p>
       Green Up is a site for plant lovers.
